@@ -79,6 +79,42 @@
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
 
+  // Wire up "Copy Discord username" on all .js-discord links/buttons.
+  // Falls back gracefully if clipboard API is unavailable.
+  const toast = document.getElementById('toast');
+  let toastTimer;
+
+  document.querySelectorAll('.js-discord').forEach(el => {
+    el.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const username = el.dataset.username || 'HaqtanEfe';
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(username);
+        ok = true;
+      } catch {
+        ok = false;
+      }
+      showToast(ok
+        ? `Discord username "${username}" copied — paste it in Discord search`
+        : `My Discord: ${username}`);
+    });
+  });
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.hidden = false;
+    // force reflow so the transition kicks in
+    void toast.offsetWidth;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('is-visible');
+      setTimeout(() => { toast.hidden = true; }, 300);
+    }, 2600);
+  }
+
   async function fallbackData() {
     // Used when /api/stats is unavailable (local file preview, or full API outage).
     // Reads projects.json and uses the `fallback` snapshot per project so numbers still appear.
