@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HaqtanEfe — Roblox Developer for Hire</title>
+<meta name="description" content="Roblox developer with 100M+ visits across shipped games. Available for commissions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-card: #141414;
+    --bg-card-hover: #181818;
+    --border: #1f1f1f;
+    --border-strong: #2a2a2a;
+    --text: #ededed;
+    --muted: #8a8a8a;
+    --muted-strong: #b5b5b5;
+    --accent: #fb7185;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { min-height: 100vh; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    line-height: 1.5;
+    padding: 48px 32px;
+  }
+  .container { max-width: 920px; margin: 0 auto; }
+
+  /* ─── Nav (matches Home) ─────────────────────────── */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav .logo {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav .logo-img { height: 32px; width: auto; display: block; }
+  .nav .logo-text .accent { color: var(--accent); }
+  .nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .nav a { color: inherit; text-decoration: none; transition: color .2s; }
+  .nav a:hover { color: var(--text); }
+  .nav .nav-active { color: var(--text); }
+
+  /* ─── Hero ───────────────────────────────────────── */
+  .hero {
+    padding: 100px 0 60px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); }
+    50%      { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.05); }
+  }
+  h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
+  h1 .accent { color: var(--accent); }
+  .lead {
+    font-size: 19px;
+    color: var(--muted-strong);
+    max-width: 580px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: transform .15s, background .2s, border-color .2s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #1a0a0d;
+  }
+  .btn-primary:hover { background: #ff8b9d; transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ─── Live Stats Panel ───────────────────────────── */
+  .stats-panel {
+    margin: 24px 0 80px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .stat .label {
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .stat .value {
+    font-family: var(--mono);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .stat .value.is-live { color: var(--accent); }
+  .stat .sub {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .stat-divider {
+    height: 60px;
+    width: 1px;
+    background: var(--border-strong);
+    justify-self: center;
+  }
+  .stats-loading .value { color: var(--muted); opacity: 0.5; }
+
+  /* ─── Sections ───────────────────────────────────── */
+  section.block { margin-bottom: 80px; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-head h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .section-head .count {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ─── Projects ───────────────────────────────────── */
+  .projects-grid { display: grid; gap: 12px; }
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color .2s, background .2s;
+  }
+  .project-card:hover {
+    border-color: var(--accent);
+    background: var(--bg-card-hover);
+  }
+  .project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 14px;
+  }
+  .project-name {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .project-role {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .project-metrics {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-family: var(--mono);
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .project-metrics .m { color: var(--muted); }
+  .project-metrics .m strong {
+    color: var(--text);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .project-metrics .m.playing strong { color: var(--accent); }
+  .bar-track {
+    height: 3px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: var(--accent);
+    opacity: 0.5;
+    transition: width .6s ease;
+  }
+  .placeholder-card {
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    padding: 32px;
+  }
+
+  /* ─── Skills ─────────────────────────────────────── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .skill {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .skill h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .skill ul { list-style: none; }
+  .skill li {
+    font-size: 14px;
+    color: var(--muted-strong);
+    padding: 4px 0;
+  }
+  .skill li::before {
+    content: "→ ";
+    color: var(--accent);
+    opacity: 0.6;
+    margin-right: 4px;
+  }
+
+  /* ─── Contact CTA ────────────────────────────────── */
+  .cta-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px;
+    text-align: center;
+  }
+  .cta-block h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+  .cta-block p {
+    color: var(--muted-strong);
+    font-size: 17px;
+    max-width: 480px;
+    margin: 0 auto 28px;
+  }
+  .cta-block .cta-row { justify-content: center; }
+
+  /* ─── Footer ─────────────────────────────────────── */
+  footer {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); text-decoration: none; margin-left: 20px; transition: color .2s; }
+  footer a:hover { color: var(--text); }
+
+  /* ─── Responsive ─────────────────────────────────── */
+  @media (max-width: 720px) {
+    body { padding: 32px 20px; }
+    .hero { padding: 48px 0 40px; }
+    .stats-panel { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+    .stat-divider { width: 60px; height: 1px; justify-self: stretch; }
+    .project-row { flex-direction: column; gap: 12px; }
+    .project-metrics { text-align: left; }
+    .cta-block { padding: 36px 24px; }
+    footer { flex-direction: column; gap: 16px; }
+    footer .links a:first-child { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ─── Nav ─── -->
+    <nav class="nav">
+      <a class="logo" href="/" aria-label="HaqtanEfe home">
+        <img class="logo-img" src="logo.png" alt="HaqtanEfe" onerror="this.remove(); document.querySelector('.logo-text').hidden=false;">
+        <span class="logo-text" hidden>HaqtanEfe<span class="accent">.</span></span>
+      </a>
+      <ul>
+        <li><a href="https://haktanefe.com">Home</a></li>
+        <li><a href="https://personal.haktanefe.com">Personal</a></li>
+        <li><a class="nav-active" href="/">Business</a></li>
+      </ul>
+    </nav>
+
+    <!-- ─── Hero ─── -->
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse-dot"></span> Available for commissions</div>
+      <h1>Roblox developer who actually ships <span class="accent">.</span></h1>
+      <p class="lead">
+        I script the systems behind games studios <em>want to be measured by</em>.
+        Backend, frontend, gameplay loops, optimization, the boring infrastructure
+        nobody wants to write — that's where I live.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:business@haktanefe.com">Commission me →</a>
+        <a class="btn btn-secondary" href="https://rodevs.com/portfolios/878362276334272523" target="_blank">View on Rodevs ↗</a>
+      </div>
+    </section>
+
+    <!-- ─── Live Stats ─── -->
+    <div class="stats-panel stats-loading" id="stats-panel">
+      <div class="stat">
+        <div class="label">Total visits</div>
+        <div class="value" id="total-visits">···</div>
+        <div class="sub" id="total-visits-sub">across all shipped projects</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="label"><span class="pulse-dot"></span> Playing right now</div>
+        <div class="value is-live" id="total-playing">···</div>
+        <div class="sub">live across all projects</div>
+      </div>
+    </div>
+
+    <!-- ─── Projects ─── -->
+    <section class="block">
+      <div class="section-head">
+        <h2>Shipped projects</h2>
+        <span class="count" id="projects-count">loading…</span>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <div class="placeholder-card">Loading projects…</div>
+      </div>
+    </section>
+
+    <!-- ─── Skills ─── -->
+    <section class="block">
+      <div class="section-head">
+        <h2>What I build</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>Scripting</h3>
+          <ul>
+            <li>Luau backend systems</li>
+            <li>Frontend / GUI logic</li>
+            <li>Server-client replication</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Game systems</h3>
+          <ul>
+            <li>Multi-server lobbies</li>
+            <li>Custom building systems</li>
+            <li>NPC &amp; vehicle AI</li>
+            <li>Cosmetics &amp; inventory</li>
+            <li>UGC integration</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Optimization</h3>
+          <ul>
+            <li>High-traffic performance</li>
+            <li>Memory profiling</li>
+            <li>Server load tuning</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Workflow</h3>
+          <ul>
+            <li>Rojo / Argon sync</li>
+            <li>Git version control</li>
+            <li>Modular, reusable design</li>
+            <li>Clear client comms</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="block">
+      <div class="cta-block">
+        <h2>Got a game that needs scripting?</h2>
+        <p>Send a brief — I'll tell you if I'm a fit, what it'll take, and roughly how long.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:business@haktanefe.com">business@haktanefe.com</a>
+          <a class="btn btn-secondary" href="#" id="discord-link">Discord: HaqtanEfe</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer>
+      <div>© HaqtanEfe · 2026</div>
+      <div class="links">
+        <a href="https://haktanefe.com">Home</a>
+        <a href="https://personal.haktanefe.com">Personal</a>
+        <a href="https://rodevs.com/portfolios/878362276334272523" target="_blank">Rodevs</a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

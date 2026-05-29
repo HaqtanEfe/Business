@@ -1,0 +1,9 @@
+{
+  "projects": [
+    { "placeId": "12452509832",  "role": "Skin system & optimization" },
+    { "placeId": "71575927487690", "role": "Scripted the entire game" },
+    { "placeId": "78172197449896", "role": "Scripted the entire game" },
+    { "placeId": "6258962270",     "role": "First level + in-game TV videos (pre-native video support)" },
+    { "placeId": "14839350618",    "role": "Scripted the entire game (with a partner)" }
+  ]
+}
