@@ -80,21 +80,26 @@
   }
 
   async function fallbackData() {
-    // Used when /api/stats is unavailable (local file preview).
-    // Reads projects.json so the cards still render, with no numbers.
+    // Used when /api/stats is unavailable (local file preview, or full API outage).
+    // Reads projects.json and uses the `fallback` snapshot per project so numbers still appear.
     try {
       const res = await fetch('projects.json');
       const json = await res.json();
-      return {
-        total: { visits: null, playing: null },
-        projects: (json.projects || []).map(p => ({
-          placeId: p.placeId,
-          role: p.role,
-          name: 'Project ' + p.placeId,
-          visits: null,
-          playing: null
-        }))
-      };
+      const projects = (json.projects || []).map(p => ({
+        placeId: p.placeId,
+        role: p.role,
+        name: (p.fallback && p.fallback.name) || ('Project ' + p.placeId),
+        visits: p.fallback ? p.fallback.visits : null,
+        playing: p.fallback ? p.fallback.playing : null
+      }));
+      const total = projects.reduce(
+        (acc, p) => ({
+          visits:  acc.visits  + (p.visits  || 0),
+          playing: acc.playing + (p.playing || 0),
+        }),
+        { visits: 0, playing: 0 }
+      );
+      return { total, projects };
     } catch {
       return { total: { visits: null, playing: null }, projects: [] };
     }
