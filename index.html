@@ -291,6 +291,138 @@
     margin-right: 4px;
   }
 
+  /* ─── By the numbers ─────────────────────────────── */
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .fact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .fact-card .num {
+    font-family: var(--mono);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .fact-card .desc {
+    font-size: 14px;
+    color: var(--muted-strong);
+    line-height: 1.4;
+  }
+  .fact-card .sub {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  /* ─── Rates ──────────────────────────────────────── */
+  .rates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .rate-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .rate-card .tier {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  .rate-card .price {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .rate-card .price .currency {
+    color: var(--accent);
+  }
+  .rate-card .ex {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .rates-note {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+  }
+  .rates-note a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+  /* ─── Payment & process ─────────────────────────── */
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .process-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px;
+  }
+  .process-card h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .process-card ol,
+  .process-card ul {
+    list-style: none;
+    counter-reset: pay;
+  }
+  .process-card li {
+    font-size: 14px;
+    color: var(--muted-strong);
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .process-card li:first-child { border-top: none; padding-top: 0; }
+  .process-card li:last-child { padding-bottom: 0; }
+  .process-card .badge {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(255,255,255,0.04);
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .process-card .name {
+    font-weight: 500;
+    color: var(--text);
+  }
+  .process-card .terms {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: right;
+  }
+
   /* ─── Contact CTA ────────────────────────────────── */
   .cta-block {
     background: var(--bg-card);
@@ -312,6 +444,36 @@
     margin: 0 auto 28px;
   }
   .cta-block .cta-row { justify-content: center; }
+  .cta-alt {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .cta-alt a { color: var(--muted-strong); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
+  .cta-alt a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ─── Toast ──────────────────────────────────────── */
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .2s ease, transform .25s ease;
+    pointer-events: none;
+  }
+  .toast.is-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 
   /* ─── Footer ─────────────────────────────────────── */
   footer {
@@ -334,6 +496,7 @@
     .stat-divider { width: 60px; height: 1px; justify-self: stretch; }
     .project-row { flex-direction: column; gap: 12px; }
     .project-metrics { text-align: left; }
+    .process-grid { grid-template-columns: 1fr; }
     .cta-block { padding: 36px 24px; }
     footer { flex-direction: column; gap: 16px; }
     footer .links a:first-child { margin-left: 0; }
@@ -366,9 +529,10 @@
         nobody wants to write — that's where I live.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:business@haktanefe.com">Commission me →</a>
+        <a class="btn btn-primary js-discord" href="#" data-username="HaqtanEfe">DM me on Discord →</a>
         <a class="btn btn-secondary" href="https://rodevs.com/portfolios/878362276334272523" target="_blank">View on Rodevs ↗</a>
       </div>
+      <p class="cta-alt">or email <a href="mailto:business@haktanefe.com">business@haktanefe.com</a></p>
     </section>
 
     <!-- ─── Live Stats ─── -->
@@ -385,6 +549,30 @@
         <div class="sub">live across all projects</div>
       </div>
     </div>
+
+    <!-- ─── By the numbers ─── -->
+    <section class="block">
+      <div class="section-head">
+        <h2>By the numbers</h2>
+      </div>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="num">7 yrs</div>
+          <div class="desc">Scripting since 2018</div>
+          <div class="sub">Commissions since Q2 2022</div>
+        </div>
+        <div class="fact-card">
+          <div class="num">80+</div>
+          <div class="desc">Commissions delivered</div>
+          <div class="sub">Small fixes to full games</div>
+        </div>
+        <div class="fact-card">
+          <div class="num">1 / 85</div>
+          <div class="desc">RoDevs Advanced Scripter</div>
+          <div class="sub">A vetted senior-level scripting rank</div>
+        </div>
+      </div>
+    </section>
 
     <!-- ─── Projects ─── -->
     <section class="block">
@@ -441,14 +629,92 @@
       </div>
     </section>
 
+    <!-- ─── Rates ─── -->
+    <section class="block">
+      <div class="section-head">
+        <h2>Rates</h2>
+        <span class="count">USD · scope-based</span>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div class="tier">Basic fixes</div>
+          <div class="price"><span class="currency">$</span>20 – <span class="currency">$</span>50</div>
+          <div class="ex">Bug fixes, small tweaks, single-behavior changes.</div>
+        </div>
+        <div class="rate-card">
+          <div class="tier">Basic systems</div>
+          <div class="price"><span class="currency">$</span>30 – <span class="currency">$</span>80</div>
+          <div class="ex">Standalone features — shops, leaderboards, simple gameplay loops.</div>
+        </div>
+        <div class="rate-card">
+          <div class="tier">Advanced systems</div>
+          <div class="price"><span class="currency">$</span>80 – <span class="currency">$</span>200</div>
+          <div class="ex">Multi-part systems — matchmaking, building, AI, inventory.</div>
+        </div>
+        <div class="rate-card">
+          <div class="tier">Full game scripting</div>
+          <div class="price"><span class="currency">$</span>200 – <span class="currency">$</span>2,000</div>
+          <div class="ex">End-to-end: gameplay, backend, optimization, polish.</div>
+        </div>
+      </div>
+      <p class="rates-note">Need a number for your project? <a href="#" class="js-discord" data-username="HaqtanEfe">DM me on Discord</a>.</p>
+    </section>
+
+    <!-- ─── Payment & process ─── -->
+    <section class="block">
+      <div class="section-head">
+        <h2>Payment &amp; process</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <h3>Methods (preferred order)</h3>
+          <ol>
+            <li>
+              <span class="name">1 — Robux</span>
+              <span class="terms">USD → DevEx + tax</span>
+            </li>
+            <li>
+              <span class="name">2 — Crypto</span>
+              <span class="terms">Major coins</span>
+            </li>
+            <li>
+              <span class="name">3 — BuyMeACoffee</span>
+              <span class="terms">Card-friendly</span>
+            </li>
+            <li>
+              <span class="name">4 — Roblox gift cards</span>
+              <span class="terms">As a last resort</span>
+            </li>
+          </ol>
+        </div>
+        <div class="process-card">
+          <h3>Structure by project size</h3>
+          <ul>
+            <li>
+              <span class="name">Small</span>
+              <span class="terms">After completion</span>
+            </li>
+            <li>
+              <span class="name">Medium</span>
+              <span class="terms">Per task <em>or</em> 30 / 70</span>
+            </li>
+            <li>
+              <span class="name">Big</span>
+              <span class="terms">Per task <em>or</em> 50 / 50</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- ─── CTA ─── -->
     <section class="block">
       <div class="cta-block">
         <h2>Got a game that needs scripting?</h2>
-        <p>Send a brief — I'll tell you if I'm a fit, what it'll take, and roughly how long.</p>
+        <p>DM me on Discord with a brief — I'll tell you if I'm a fit, what it'll take, and roughly how long.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:business@haktanefe.com">business@haktanefe.com</a>
-          <a class="btn btn-secondary" href="#" id="discord-link">Discord: HaqtanEfe</a>
+          <a class="btn btn-primary js-discord" href="#" data-username="HaqtanEfe">@HaqtanEfe on Discord</a>
+          <a class="btn btn-secondary" href="mailto:business@haktanefe.com">Email instead</a>
         </div>
       </div>
     </section>
@@ -457,11 +723,15 @@
     <footer>
       <div>© HaqtanEfe · 2026</div>
       <div class="links">
+        <a href="#" class="js-discord" data-username="HaqtanEfe">Discord</a>
+        <a href="https://rodevs.com/portfolios/878362276334272523" target="_blank">Rodevs</a>
         <a href="https://haktanefe.com">Home</a>
         <a href="https://personal.haktanefe.com">Personal</a>
-        <a href="https://rodevs.com/portfolios/878362276334272523" target="_blank">Rodevs</a>
       </div>
     </footer>
+
+    <!-- Toast for clipboard feedback -->
+    <div id="toast" class="toast" hidden></div>
 
   </div>
   <script src="script.js"></script>
