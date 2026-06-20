@@ -21,6 +21,16 @@
       "fallback": { "name": "Aqua's Glitch Per Difficulty Chart Obby", "visits": 1119186, "playing": 0 }
     },
     {
+      "placeId": "116623852880653",
+      "role": "Scripted the entire game",
+      "fallback": { "name": "Shoot to Earth's CORE!", "visits": 96847, "playing": 0 }
+    },
+    {
+      "placeId": "78172197449896",
+      "role": "Scripted the entire game",
+      "fallback": { "name": "Pet Digging Simulator", "visits": 88479, "playing": 0 }
+    },
+    {
       "placeId": "106193613636888",
       "role": "Event system + additional features",
       "fallback": { "name": "[🦄] Steal a Among Us", "visits": 28364, "playing": 0 }
