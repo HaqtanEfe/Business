@@ -11,6 +11,16 @@
       "fallback": { "name": "Build a Brainrot", "visits": 26293567, "playing": 2 }
     },
     {
+      "placeId": "10222333249",
+      "role": "Checkpoint system, animations + additional bugfixes & features",
+      "fallback": { "name": "Star's Glitch Per Difficulty Chart Obby", "visits": 2545476, "playing": 0 }
+    },
+    {
+      "placeId": "12278997443",
+      "role": "Handled marketplace features, some animations + additional features",
+      "fallback": { "name": "Aqua's Glitch Per Difficulty Chart Obby", "visits": 1119186, "playing": 0 }
+    },
+    {
       "placeId": "106193613636888",
       "role": "Event system + additional features",
       "fallback": { "name": "[🦄] Steal a Among Us", "visits": 28364, "playing": 0 }
