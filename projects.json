@@ -3,46 +3,43 @@
     {
       "placeId": "12452509832",
       "role": "Skin system & optimization",
-      "fallback": { "name": "Getting Over it [Remastered]", "visits": 107320317, "playing": 133 }
+      "description": "A brutal climbing challenge — scale an impossible mountain with nothing but a hammer, and try not to slide all the way back down.",
+      "fallback": { "name": "Getting Over it [Remastered]", "visits": 108000000, "playing": 133 }
     },
     {
       "placeId": "71575927487690",
       "role": "Scripted the entire game",
-      "fallback": { "name": "Build a Brainrot", "visits": 26293567, "playing": 2 }
+      "description": "Collect and combine the internet's favourite brainrots, grow your base, and out-produce everyone else on the server.",
+      "fallback": { "name": "Build a Brainrot", "visits": 26000000, "playing": 2 }
     },
     {
       "placeId": "10222333249",
       "role": "Checkpoint system, animations + additional bugfixes & features",
-      "fallback": { "name": "Star's Glitch Per Difficulty Chart Obby", "visits": 2545476, "playing": 0 }
+      "description": "A glitch-based difficulty-chart obby that ramps up stage by stage — only a small percentage of players ever finish it.",
+      "fallback": { "name": "Star's Glitch Per Difficulty Chart Obby", "visits": 2546095, "playing": 0 }
     },
     {
       "placeId": "12278997443",
       "role": "Handled marketplace features, some animations + additional features",
-      "fallback": { "name": "Aqua's Glitch Per Difficulty Chart Obby", "visits": 1119186, "playing": 0 }
-    },
-    {
-      "placeId": "116623852880653",
-      "role": "Scripted the entire game",
-      "fallback": { "name": "Shoot to Earth's CORE!", "visits": 96847, "playing": 0 }
-    },
-    {
-      "placeId": "78172197449896",
-      "role": "Scripted the entire game",
-      "fallback": { "name": "Pet Digging Simulator", "visits": 88479, "playing": 0 }
+      "description": "A difficulty-chart obby with every stage tested and your progress auto-saved as you climb.",
+      "fallback": { "name": "Aqua's Glitch Per Difficulty Chart Obby", "visits": 1119198, "playing": 0 }
     },
     {
       "placeId": "106193613636888",
       "role": "Event system + additional features",
+      "description": "Sneak into rival bases, steal their prized units, and defend your own in a fast-paced steal-and-run.",
       "fallback": { "name": "[🦄] Steal a Among Us", "visits": 28364, "playing": 0 }
     },
     {
       "placeId": "14839350618",
       "role": "Scripted the entire game (with a partner)",
+      "description": "Spin for a shot at rare rewards, climb the ranks, and gamble your way to the top of the leaderboard.",
       "fallback": { "name": "[👑OVER] SPIN TO WIN!", "visits": 9500, "playing": 0 }
     },
     {
       "placeId": "133989351175623",
       "role": "Scripted the entire game",
+      "description": "Stack, balance and defend an ever-growing tower of brainrots against everything the game throws at it.",
       "fallback": { "name": "Build Tower For Brainrots!", "visits": 9322, "playing": 0 }
     }
   ]

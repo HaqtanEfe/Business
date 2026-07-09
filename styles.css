@@ -1,0 +1,59 @@
+/* ============================================================================
+   styles.css — global tokens, keyframes and responsive rules.
+   Lifted from the Claude Design mockup; per-element styling stays inline in
+   index.html (matching the mockup 1:1). Accent is driven by CSS variables so
+   the swatch picker recolors the whole site at once.
+   ========================================================================== */
+
+:root {
+  --accent: #C4A6FF;
+  --glow: rgba(196,166,255,0.11);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0B0B0D; }
+::selection { background: rgba(196,166,255,0.28); }
+
+@keyframes marq   { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes pulse  { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.8); } }
+
+input::placeholder, textarea::placeholder { color: #55555E; }
+.pf-field:focus { outline: none; border-color: rgba(196,166,255,0.6) !important; }
+
+/* --- responsive --- */
+@media (max-width: 1080px) {
+  .pf-grid-4 { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media (max-width: 1000px) {
+  .pf-nav { padding: 14px 22px !important; }
+  .pf-nav-links > a:not(.pf-hire), .pf-swatches { display: none !important; }
+}
+@media (max-width: 900px) {
+  .pf-hero    { grid-template-columns: 1fr !important; gap: 44px !important; padding: 64px 22px 52px !important; }
+  .pf-about   { grid-template-columns: 1fr !important; gap: 40px !important; padding: 72px 22px !important; }
+  .pf-ai      { grid-template-columns: 1fr !important; gap: 44px !important; padding: 72px 22px !important; }
+  .pf-contact { grid-template-columns: 1fr !important; gap: 44px !important; padding: 72px 22px 40px !important; }
+  .pf-grid-3  { grid-template-columns: repeat(2,1fr) !important; }
+  .pf-stats   { grid-template-columns: 1fr !important; padding: 12px 22px 40px !important; }
+  .pf-stats-label { padding: 20px 22px 8px !important; }
+  .pf-stats > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; padding: 22px 0 !important; }
+  .pf-stats > div:last-child { border-bottom: none !important; }
+  .pf-pad { padding: 72px 22px !important; }
+}
+@media (max-width: 600px) {
+  .pf-grid-3, .pf-grid-4, .pf-hue-grid, .pf-form { grid-template-columns: 1fr !important; }
+  .pf-hero    { padding: 48px 20px 40px !important; }
+  .pf-about, .pf-ai { padding: 56px 20px !important; }
+  .pf-contact { padding: 56px 20px 36px !important; }
+  .pf-pad     { padding: 56px 20px !important; }
+  .pf-stats   { padding: 8px 20px 32px !important; }
+  .pf-stats-label { padding: 20px 20px 8px !important; }
+}
+
+/* Respect users who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  html { scroll-behavior: auto; }
+}

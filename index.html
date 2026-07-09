@@ -1,749 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HaqtanEfe — Roblox Developer for Hire</title>
-<meta name="description" content="Roblox developer with 100M+ visits across shipped games. Available for commissions.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HaqtanEfe — Roblox Systems Engineer · Commissions</title>
+<meta name="description" content="HaqtanEfe — Roblox developer engineering the systems behind games played 130M+ times. Backend, frontend, gameplay & optimization commissions. One of 85 RoDevs Advanced Scripters.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B0B0D'/%3E%3Crect x='28' y='28' width='44' height='44' rx='12' fill='%23C4A6FF'/%3E%3Ctext x='50' y='58' font-family='monospace' font-weight='700' font-size='20' fill='%230B0B0D' text-anchor='middle'%3EHE%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://business.haktanefe.com/">
+<meta property="og:title" content="HaqtanEfe — Roblox Systems Engineer">
+<meta property="og:description" content="I engineer the systems behind games played 130M+ times. Backend, frontend, gameplay & optimization commissions.">
+<meta property="og:image" content="https://business.haktanefe.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HaqtanEfe — Roblox Systems Engineer">
+<meta name="twitter:description" content="I engineer the systems behind games played 130M+ times. Roblox commissions.">
+<meta name="twitter:image" content="https://business.haktanefe.com/og.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VJZ87RVH1R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VJZ87RVH1R');
-</script>
-<style>
-  :root {
-    --bg: #0a0a0a;
-    --bg-card: #141414;
-    --bg-card-hover: #181818;
-    --border: #1f1f1f;
-    --border-strong: #2a2a2a;
-    --text: #ededed;
-    --muted: #8a8a8a;
-    --muted-strong: #b5b5b5;
-    --accent: #fb7185;
-    --mono: 'JetBrains Mono', ui-monospace, monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { min-height: 100vh; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-feature-settings: "cv11", "ss01";
-    line-height: 1.5;
-    padding: 48px 32px;
-  }
-  .container { max-width: 920px; margin: 0 auto; }
-
-  /* ─── Nav (matches Home) ─────────────────────────── */
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav .logo {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    font-size: 18px;
-    text-decoration: none;
-    color: inherit;
-  }
-  .nav .logo-img { height: 32px; width: auto; display: block; }
-  .nav .logo-text .accent { color: var(--accent); }
-  .nav ul {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-    font-size: 14px;
-    color: var(--muted);
-  }
-  .nav a { color: inherit; text-decoration: none; transition: color .2s; }
-  .nav a:hover { color: var(--text); }
-  .nav .nav-active { color: var(--text); }
-
-  /* ─── Hero ───────────────────────────────────────── */
-  .hero {
-    padding: 100px 0 60px;
-  }
-  .eyebrow {
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .pulse-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); }
-    50%      { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.05); }
-  }
-  h1 {
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 800;
-    letter-spacing: -0.035em;
-    line-height: 1.02;
-    margin-bottom: 28px;
-    max-width: 720px;
-  }
-  h1 .accent { color: var(--accent); }
-  .lead {
-    font-size: 19px;
-    color: var(--muted-strong);
-    max-width: 580px;
-    line-height: 1.6;
-    margin-bottom: 36px;
-  }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: transform .15s, background .2s, border-color .2s;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: #1a0a0d;
-  }
-  .btn-primary:hover { background: #ff8b9d; transform: translateY(-1px); }
-  .btn-secondary {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border-strong);
-  }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* ─── Live Stats Panel ───────────────────────────── */
-  .stats-panel {
-    margin: 24px 0 80px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-    align-items: center;
-  }
-  .stat .label {
-    color: var(--muted);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .stat .value {
-    font-family: var(--mono);
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-  .stat .value.is-live { color: var(--accent); }
-  .stat .sub {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 6px;
-  }
-  .stat-divider {
-    height: 60px;
-    width: 1px;
-    background: var(--border-strong);
-    justify-self: center;
-  }
-  .stats-loading .value { color: var(--muted); opacity: 0.5; }
-
-  /* ─── Sections ───────────────────────────────────── */
-  section.block { margin-bottom: 80px; }
-  .section-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 28px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-head h2 {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-  .section-head .count {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  /* ─── Projects ───────────────────────────────────── */
-  .projects-grid { display: grid; gap: 12px; }
-  .project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 28px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: border-color .2s, background .2s;
-  }
-  .project-card:hover {
-    border-color: var(--accent);
-    background: var(--bg-card-hover);
-  }
-  .project-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 14px;
-  }
-  .project-name {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-  .project-role {
-    color: var(--muted);
-    font-size: 14px;
-    margin-top: 4px;
-  }
-  .project-metrics {
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
-    font-family: var(--mono);
-    text-align: right;
-    flex-shrink: 0;
-  }
-  .project-metrics .m { color: var(--muted); }
-  .project-metrics .m strong {
-    color: var(--text);
-    font-weight: 500;
-    margin-right: 4px;
-  }
-  .project-metrics .m.playing strong { color: var(--accent); }
-  .bar-track {
-    height: 3px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .bar-fill {
-    height: 100%;
-    background: var(--accent);
-    opacity: 0.5;
-    transition: width .6s ease;
-  }
-  .placeholder-card {
-    color: var(--muted);
-    font-style: italic;
-    text-align: center;
-    padding: 32px;
-  }
-
-  /* ─── Skills ─────────────────────────────────────── */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-  }
-  .skill {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px;
-  }
-  .skill h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  .skill ul { list-style: none; }
-  .skill li {
-    font-size: 14px;
-    color: var(--muted-strong);
-    padding: 4px 0;
-  }
-  .skill li::before {
-    content: "→ ";
-    color: var(--accent);
-    opacity: 0.6;
-    margin-right: 4px;
-  }
-
-  /* ─── By the numbers ─────────────────────────────── */
-  .facts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-  }
-  .fact-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-  }
-  .fact-card .num {
-    font-family: var(--mono);
-    font-size: 36px;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: -0.02em;
-    line-height: 1;
-    margin-bottom: 12px;
-  }
-  .fact-card .desc {
-    font-size: 14px;
-    color: var(--muted-strong);
-    line-height: 1.4;
-  }
-  .fact-card .sub {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 6px;
-  }
-
-  /* ─── Rates ──────────────────────────────────────── */
-  .rates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-  }
-  .rate-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .rate-card .tier {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-  }
-  .rate-card .price {
-    font-family: var(--mono);
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--text);
-  }
-  .rate-card .price .currency {
-    color: var(--accent);
-  }
-  .rate-card .ex {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-  .rates-note {
-    margin-top: 16px;
-    color: var(--muted);
-    font-size: 14px;
-    text-align: center;
-  }
-  .rates-note a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
-
-  /* ─── Payment & process ─────────────────────────── */
-  .process-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .process-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 26px;
-  }
-  .process-card h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 18px;
-    font-weight: 600;
-  }
-  .process-card ol,
-  .process-card ul {
-    list-style: none;
-    counter-reset: pay;
-  }
-  .process-card li {
-    font-size: 14px;
-    color: var(--muted-strong);
-    padding: 10px 0;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-  }
-  .process-card li:first-child { border-top: none; padding-top: 0; }
-  .process-card li:last-child { padding-bottom: 0; }
-  .process-card .badge {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
-    background: rgba(255,255,255,0.04);
-    padding: 3px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .process-card .name {
-    font-weight: 500;
-    color: var(--text);
-  }
-  .process-card .terms {
-    color: var(--muted);
-    font-size: 13px;
-    text-align: right;
-  }
-
-  /* ─── Contact CTA ────────────────────────────────── */
-  .cta-block {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 48px;
-    text-align: center;
-  }
-  .cta-block h2 {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    margin-bottom: 14px;
-  }
-  .cta-block p {
-    color: var(--muted-strong);
-    font-size: 17px;
-    max-width: 480px;
-    margin: 0 auto 28px;
-  }
-  .cta-block .cta-row { justify-content: center; }
-  .cta-alt {
-    margin-top: 16px;
-    font-size: 14px;
-    color: var(--muted);
-  }
-  .cta-alt a { color: var(--muted-strong); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
-  .cta-alt a:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* ─── Toast ──────────────────────────────────────── */
-  .toast {
-    position: fixed;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%) translateY(8px);
-    background: var(--bg-card);
-    color: var(--text);
-    border: 1px solid var(--accent);
-    padding: 12px 22px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 500;
-    z-index: 100;
-    opacity: 0;
-    transition: opacity .2s ease, transform .25s ease;
-    pointer-events: none;
-  }
-  .toast.is-visible {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  /* ─── Footer ─────────────────────────────────────── */
-  footer {
-    margin-top: 60px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    color: var(--muted);
-    font-size: 13px;
-  }
-  footer a { color: var(--muted); text-decoration: none; margin-left: 20px; transition: color .2s; }
-  footer a:hover { color: var(--text); }
-
-  /* ─── Responsive ─────────────────────────────────── */
-  @media (max-width: 720px) {
-    body { padding: 32px 20px; }
-    .hero { padding: 48px 0 40px; }
-    .stats-panel { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
-    .stat-divider { width: 60px; height: 1px; justify-self: stretch; }
-    .project-row { flex-direction: column; gap: 12px; }
-    .project-metrics { text-align: left; }
-    .process-grid { grid-template-columns: 1fr; }
-    .cta-block { padding: 36px 24px; }
-    footer { flex-direction: column; gap: 16px; }
-    footer .links a:first-child { margin-left: 0; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="container">
+<div style="background:#0B0B0D; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; min-height:100vh; overflow-x:hidden;">
 
-    <!-- ─── Nav ─── -->
-    <nav class="nav">
-      <a class="logo" href="/" aria-label="HaqtanEfe home">
-        <img class="logo-img" src="logo.png" alt="HaqtanEfe" onerror="this.remove(); document.querySelector('.logo-text').hidden=false;">
-        <span class="logo-text" hidden>HaqtanEfe<span class="accent">.</span></span>
-      </a>
-      <ul>
-        <li><a href="https://haktanefe.com">Home</a></li>
-        <li><a href="https://personal.haktanefe.com">Personal</a></li>
-        <li><a class="nav-active" href="/">Business</a></li>
-      </ul>
-    </nav>
+  <!-- ambient glow -->
+  <div style="position:fixed; inset:0; pointer-events:none; z-index:0; background:radial-gradient(700px 500px at 78% -8%, var(--glow), transparent 60%);"></div>
 
-    <!-- ─── Hero ─── -->
-    <section class="hero">
-      <div class="eyebrow"><span class="pulse-dot"></span> Available for commissions</div>
-      <h1>Roblox developer who actually ships <span class="accent">.</span></h1>
-      <p class="lead">
-        I script the systems behind games studios <em>want to be measured by</em>.
-        Backend, frontend, gameplay loops, optimization, the boring infrastructure
-        nobody wants to write — that's where I live.
+  <!-- NAV -->
+  <nav class="pf-nav" style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; backdrop-filter:blur(14px); background:rgba(11,11,13,0.72); border-bottom:1px solid rgba(255,255,255,0.07);">
+    <a href="#top" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:#EDEDEF;">
+      <span style="width:11px; height:11px; border-radius:3px; background:var(--accent); box-shadow:0 0 12px var(--accent);"></span>
+      <span style="font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:-0.02em; font-size:16px;">HaqtanEfe</span>
+    </a>
+    <div class="pf-nav-links" style="display:flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:13px;">
+      <div class="pf-swatches" id="pf-swatches" title="Theme accent" style="display:flex; align-items:center; gap:7px; margin-right:6px; padding-right:12px; border-right:1px solid rgba(255,255,255,0.1);"></div>
+      <a href="#stats" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">stats</a>
+      <a href="#work" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">work</a>
+      <a href="#reviews" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">reviews</a>
+      <a href="#process" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">process</a>
+      <a href="#skills" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">skills</a>
+      <a href="#rates" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">rates</a>
+      <a href="#faq" style="color:#9A9AA3; text-decoration:none; padding:8px 11px; border-radius:8px;">faq</a>
+      <a href="#contact" class="pf-hire" style="margin-left:6px; color:#0B0B0D; background:var(--accent); text-decoration:none; padding:9px 16px; border-radius:8px; font-weight:600;">Hire me</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="pf-hero" style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:96px 40px 72px; display:grid; grid-template-columns:1.05fr 1fr; gap:52px; align-items:center;">
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); border:1px solid rgba(255,255,255,0.12); padding:7px 14px; border-radius:100px; margin-bottom:28px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:var(--accent);"></span>
+        LUAU · GAMEPLAY SYSTEMS · ROBLOX
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(40px,5.4vw,70px); line-height:0.98; letter-spacing:-0.035em; margin:0 0 24px; color:#F6F6F8;">
+        I engineer the systems behind games played
+        <span style="color:var(--accent);"> <span id="pf-hero-visits">130M+</span></span> times.
+      </h1>
+      <p style="font-size:19px; line-height:1.6; color:#A4A4AD; max-width:530px; margin:0 0 36px;">
+        <span data-age>18</span>-year-old Roblox developer, scripting since 2018 and <span style="color:#EDEDEF;">one of 85</span> RoDevs Advanced Scripters. Backend, frontend, gameplay loops, and the optimization work nobody wants to write, that's where I live.
       </p>
-      <div class="cta-row">
-        <a class="btn btn-primary js-discord" href="#" data-username="HaqtanEfe">DM me on Discord →</a>
-        <a class="btn btn-secondary" href="https://rodevs.com/portfolios/878362276334272523" target="_blank">View on Rodevs ↗</a>
-      </div>
-      <p class="cta-alt">or email <a href="mailto:business@haktanefe.com">business@haktanefe.com</a></p>
-    </section>
-
-    <!-- ─── Live Stats ─── -->
-    <div class="stats-panel stats-loading" id="stats-panel">
-      <div class="stat">
-        <div class="label">Total visits</div>
-        <div class="value" id="total-visits">···</div>
-        <div class="sub" id="total-visits-sub">across all shipped projects</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <div class="label"><span class="pulse-dot"></span> Playing right now</div>
-        <div class="value is-live" id="total-playing">···</div>
-        <div class="sub">live across all projects</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#contact" style="display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:#0B0B0D; text-decoration:none; font-weight:600; font-size:15px; padding:14px 24px; border-radius:11px;">
+          Start a project <span style="font-family:'JetBrains Mono',monospace;">→</span>
+        </a>
+        <a href="#stats" style="display:inline-flex; align-items:center; gap:9px; background:transparent; color:#EDEDEF; text-decoration:none; font-weight:500; font-size:15px; padding:14px 24px; border-radius:11px; border:1px solid rgba(255,255,255,0.16);">
+          See the numbers
+        </a>
       </div>
     </div>
 
-    <!-- ─── By the numbers ─── -->
-    <section class="block">
-      <div class="section-head">
-        <h2>By the numbers</h2>
+    <!-- terminal card (cycles puzzle snippets; pauses on hover) -->
+    <div id="pf-terminal" style="animation:floaty 8s ease-in-out infinite; background:#111114; border:1px solid rgba(255,255,255,0.09); border-radius:16px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+      <div style="display:flex; align-items:center; gap:8px; padding:13px 16px; border-bottom:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.02);">
+        <span style="width:11px; height:11px; border-radius:50%; background:#2C2C31;"></span>
+        <span style="width:11px; height:11px; border-radius:50%; background:#2C2C31;"></span>
+        <span style="width:11px; height:11px; border-radius:50%; background:#2C2C31;"></span>
+        <span id="pf-terminal-file" style="margin-left:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8D8D97;"></span>
+        <span id="pf-terminal-counter" style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:#5F5F68;"></span>
       </div>
-      <div class="facts-grid">
-        <div class="fact-card">
-          <div class="num">7 yrs</div>
-          <div class="desc">Scripting since 2018</div>
-          <div class="sub">Commissions since Q2 2022</div>
-        </div>
-        <div class="fact-card">
-          <div class="num">80+</div>
-          <div class="desc">Commissions delivered</div>
-          <div class="sub">Small fixes to full games</div>
-        </div>
-        <div class="fact-card">
-          <div class="num">1 / 85</div>
-          <div class="desc">RoDevs Advanced Scripter</div>
-          <div class="sub">A vetted senior-level scripting rank</div>
-        </div>
-      </div>
-    </section>
+      <pre id="pf-terminal-code" style="margin:0; padding:20px 22px; font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.6; color:#C9C9D2; tab-size:2; min-height:300px; overflow:hidden; white-space:pre-wrap; word-break:break-word; transition:opacity 0.22s ease;"></pre>
+    </div>
+  </header>
 
-    <!-- ─── Projects ─── -->
-    <section class="block">
-      <div class="section-head">
-        <h2>Shipped projects</h2>
-        <span class="count" id="projects-count">loading…</span>
+  <!-- STATS BAND -->
+  <section id="stats" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07); border-bottom:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.015);">
+    <div class="pf-stats-label" style="max-width:1240px; margin:0 auto; padding:20px 40px 8px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:#6D6D77;">// BY THE NUMBERS</div>
+    <div class="pf-stats" style="max-width:1240px; margin:0 auto; padding:12px 40px 56px; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:0;">
+      <div style="padding:20px 40px 20px 0; border-right:1px solid rgba(255,255,255,0.08);">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div id="pf-visits" style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(44px,6vw,80px); line-height:1; letter-spacing:-0.04em; color:var(--accent); font-variant-numeric:tabular-nums;">133,000,000</div>
+        </div>
+        <div style="margin-top:14px; display:flex; align-items:center; gap:8px;">
+          <span style="width:8px; height:8px; border-radius:50%; background:#4ADE80; animation:pulse 1.6s ease-in-out infinite;"></span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4ADE80; letter-spacing:0.08em;">LIVE</span>
+          <span style="font-size:15px; color:#A4A4AD;">· Total experience visits across shipped games</span>
+        </div>
       </div>
-      <div class="projects-grid" id="projects-grid">
-        <div class="placeholder-card">Loading projects…</div>
+      <div style="padding:20px 40px; border-right:1px solid rgba(255,255,255,0.08);">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(40px,5vw,60px); line-height:1; letter-spacing:-0.03em; color:#F6F6F8;">7<span style="color:#4A4A52;"> yrs</span></div>
+        <div style="margin-top:12px; font-size:15px; color:#A4A4AD;">Scripting since 2018</div>
       </div>
-    </section>
+      <div style="padding:20px 0 20px 40px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(40px,5vw,60px); line-height:1; letter-spacing:-0.03em; color:#F6F6F8;">80<span style="color:#4A4A52;">+</span></div>
+        <div style="margin-top:12px; font-size:15px; color:#A4A4AD;">Commissions delivered since 2022</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ─── Skills ─── -->
-    <section class="block">
-      <div class="section-head">
-        <h2>What I build</h2>
+  <!-- ABOUT -->
+  <section id="about" class="pf-about" style="position:relative; z-index:1; max-width:1240px; margin:0 auto; padding:100px 40px; display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; align-items:start;">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:20px;">// ABOUT</div>
+      <div id="pf-avatar" style="aspect-ratio:1/1; border-radius:16px; border:1px solid rgba(255,255,255,0.1); background-image:repeating-linear-gradient(135deg, rgba(255,255,255,0.045) 0 12px, transparent 12px 24px); background-size:cover; background-position:center; display:flex; align-items:flex-end; padding:18px;">
+        <span id="pf-avatar-label" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6D6D77;">[ avatar render / headshot ]</span>
       </div>
-      <div class="skills-grid">
-        <div class="skill">
-          <h3>Scripting</h3>
-          <ul>
-            <li>Luau backend systems</li>
-            <li>Frontend / GUI logic</li>
-            <li>Server-client replication</li>
-          </ul>
+    </div>
+    <div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0 0 26px; color:#F6F6F8;">
+        Self-taught, obsessed with how games actually <span style="color:var(--accent);">work</span> under the hood.
+      </h2>
+      <p style="font-size:18px; line-height:1.7; color:#A4A4AD; margin:0 0 20px;">
+        I'm HaqtanEfe, a Roblox developer who fell into scripting in 2018 and never stopped. What started as a kid tweaking free models turned into shipping full backend, frontend, and gameplay systems that players interact with millions of times over.
+      </p>
+      <p style="font-size:18px; line-height:1.7; color:#A4A4AD; margin:0 0 32px;">
+        I've delivered 80+ commissions since 2022, from small fixes to full games, and I'm one of only 85 RoDevs Advanced Scripters, a vetted senior-level rank. I care about the invisible stuff: solid architecture, reliable replication, and code other developers can actually read and extend. I write systems, not spaghetti.
+      </p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px 20px; min-width:120px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:24px; color:#F6F6F8;"><span data-age>18</span></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6D6D77; margin-top:4px;">years old</div>
         </div>
-        <div class="skill">
-          <h3>Game systems</h3>
-          <ul>
-            <li>Multi-server lobbies</li>
-            <li>Custom building systems</li>
-            <li>NPC &amp; vehicle AI</li>
-            <li>Cosmetics &amp; inventory</li>
-            <li>UGC integration</li>
-          </ul>
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px 20px; min-width:120px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:24px; color:#F6F6F8;">1 of 85</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6D6D77; margin-top:4px;">RoDevs Advanced Scripters</div>
         </div>
-        <div class="skill">
-          <h3>Optimization</h3>
-          <ul>
-            <li>High-traffic performance</li>
-            <li>Memory profiling</li>
-            <li>Server load tuning</li>
-          </ul>
-        </div>
-        <div class="skill">
-          <h3>Workflow</h3>
-          <ul>
-            <li>Rojo / Argon sync</li>
-            <li>Git version control</li>
-            <li>Modular, reusable design</li>
-            <li>Clear client comms</li>
-          </ul>
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px 20px; min-width:120px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:24px; color:var(--accent);">Open</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6D6D77; margin-top:4px;">to work</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ─── Rates ─── -->
-    <section class="block">
-      <div class="section-head">
-        <h2>Rates</h2>
-        <span class="count">USD · scope-based</span>
+  <!-- WORK / PROJECTS -->
+  <section id="work" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.015);">
+    <div class="pf-pad" style="max-width:1240px; margin:0 auto; padding:96px 40px;">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:48px;">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// SELECTED WORK</div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0; color:#F6F6F8;">Systems, shipped.</h2>
+        </div>
+        <button id="pf-projects-toggle" style="display:inline-flex; align-items:center; gap:10px; cursor:pointer; background:transparent; font-family:'JetBrains Mono',monospace; font-size:13.5px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.18); border-radius:11px; padding:12px 20px; white-space:nowrap;">
+          <span id="pf-projects-label">View all projects</span> <span style="color:var(--accent);" id="pf-projects-arrow">↓</span>
+        </button>
       </div>
-      <div class="rates-grid">
-        <div class="rate-card">
-          <div class="tier">Basic fixes</div>
-          <div class="price"><span class="currency">$</span>20 – <span class="currency">$</span>50</div>
-          <div class="ex">Bug fixes, small tweaks, single-behavior changes.</div>
-        </div>
-        <div class="rate-card">
-          <div class="tier">Basic systems</div>
-          <div class="price"><span class="currency">$</span>30 – <span class="currency">$</span>80</div>
-          <div class="ex">Standalone features — shops, leaderboards, simple gameplay loops.</div>
-        </div>
-        <div class="rate-card">
-          <div class="tier">Advanced systems</div>
-          <div class="price"><span class="currency">$</span>80 – <span class="currency">$</span>200</div>
-          <div class="ex">Multi-part systems — matchmaking, building, AI, inventory.</div>
-        </div>
-        <div class="rate-card">
-          <div class="tier">Full game scripting</div>
-          <div class="price"><span class="currency">$</span>200 – <span class="currency">$</span>2,000</div>
-          <div class="ex">End-to-end: gameplay, backend, optimization, polish.</div>
-        </div>
-      </div>
-      <p class="rates-note">Need a number for your project? <a href="#" class="js-discord" data-username="HaqtanEfe">DM me on Discord</a>.</p>
-    </section>
+      <div class="pf-grid-3" id="pf-projects" style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;"></div>
+    </div>
+  </section>
 
-    <!-- ─── Payment & process ─── -->
-    <section class="block">
-      <div class="section-head">
-        <h2>Payment &amp; process</h2>
-      </div>
-      <div class="process-grid">
-        <div class="process-card">
-          <h3>Methods (preferred order)</h3>
-          <ol>
-            <li>
-              <span class="name">1 — Robux</span>
-              <span class="terms">USD → DevEx + tax</span>
-            </li>
-            <li>
-              <span class="name">2 — Crypto</span>
-              <span class="terms">Major coins</span>
-            </li>
-            <li>
-              <span class="name">3 — BuyMeACoffee</span>
-              <span class="terms">Card-friendly</span>
-            </li>
-            <li>
-              <span class="name">4 — Roblox gift cards</span>
-              <span class="terms">As a last resort</span>
-            </li>
-          </ol>
+  <!-- REVIEWS -->
+  <section id="reviews" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="pf-pad" style="max-width:1240px; margin:0 auto; padding:96px 40px;">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:48px;">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// CLIENT REVIEWS</div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0; color:#F6F6F8;">What clients say.</h2>
         </div>
-        <div class="process-card">
-          <h3>Structure by project size</h3>
-          <ul>
-            <li>
-              <span class="name">Small</span>
-              <span class="terms">After completion</span>
-            </li>
-            <li>
-              <span class="name">Medium</span>
-              <span class="terms">Per task <em>or</em> 30 / 70</span>
-            </li>
-            <li>
-              <span class="name">Big</span>
-              <span class="terms">Per task <em>or</em> 50 / 50</span>
-            </li>
-          </ul>
+        <p style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6D6D77; max-width:300px; margin:0;">Real feedback from shipped commissions.</p>
+      </div>
+      <div class="pf-grid-3" id="pf-reviews" style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;"></div>
+    </div>
+  </section>
+
+  <!-- AI / Hue "Client experience" section temporarily hidden until Hue is finished.
+       To re-enable: `git revert` the commit that hid it — restores this whole section
+       AND the "ai" nav link. (app.js already no-ops when #pf-chat / #pf-hue-features are absent.) -->
+
+  <!-- HOW WE WORK -->
+  <section id="process" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="pf-pad" style="max-width:1240px; margin:0 auto; padding:96px 40px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// HOW WE WORK</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0 0 48px; color:#F6F6F8; max-width:640px;">From brief to delivery, no guesswork.</h2>
+      <div class="pf-grid-4" id="pf-steps" style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="pf-pad" style="max-width:1240px; margin:0 auto; padding:96px 40px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// SKILLS &amp; TECH</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0 0 48px; color:#F6F6F8; max-width:640px;">
+        The toolkit behind the systems.
+      </h2>
+
+      <div class="pf-grid-3" id="pf-skills" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;"></div>
+
+      <div style="margin-top:36px; overflow:hidden; border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:18px 0; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+        <div id="pf-tech" style="display:flex; width:max-content; gap:14px; animation:marq 28s linear infinite; padding-left:14px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATES -->
+  <section id="rates" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.015);">
+    <div class="pf-pad" style="max-width:1240px; margin:0 auto; padding:96px 40px;">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:48px;">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// RATES</div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0; color:#F6F6F8;">Commission pricing.</h2>
+        </div>
+        <p style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6D6D77; max-width:300px; margin:0;">Ranges scale with scope · message for an exact quote.</p>
+      </div>
+
+      <div class="pf-grid-4" id="pf-tiers" style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;"></div>
+
+      <div style="margin-top:28px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,0.07); padding-top:26px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.12em; color:#6D6D77;">ACCEPTED PAYMENTS</span>
+        <div id="pf-payments" style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="pf-pad" style="max-width:1000px; margin:0 auto; padding:96px 40px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// FAQ</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0 0 48px; color:#F6F6F8;">
+        Questions, answered.
+      </h2>
+      <div id="pf-faqs" style="display:flex; flex-direction:column; gap:12px;"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07);">
+    <div class="pf-contact" style="max-width:1240px; margin:0 auto; padding:100px 40px 40px; display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:16px;">// PROJECT INQUIRY</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.8vw,50px); line-height:1.04; letter-spacing:-0.03em; margin:0 0 22px; color:#F6F6F8;">
+          Tell me about<br>your project.
+        </h2>
+        <p style="font-size:17px; line-height:1.65; color:#A4A4AD; margin:0 0 28px; max-width:360px;">
+          Fill this out and it lands straight in my Discord. I usually reply within the hour.
+        </p>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8F8F98; display:flex; flex-direction:column; gap:10px;">
+          <div><span style="color:var(--accent);">→</span> Prefer to DM? <span style="color:#EDEDEF;">@HaqtanEfe</span></div>
+          <div><span style="color:var(--accent);">→</span> Email <span style="color:#EDEDEF;">business@haktanefe.com</span></div>
+          <div><span style="color:var(--accent);">→</span> Response time <span style="color:#EDEDEF;">under an hour on average</span></div>
         </div>
       </div>
-    </section>
 
-    <!-- ─── CTA ─── -->
-    <section class="block">
-      <div class="cta-block">
-        <h2>Got a game that needs scripting?</h2>
-        <p>DM me on Discord with a brief — I'll tell you if I'm a fit, what it'll take, and roughly how long.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary js-discord" href="#" data-username="HaqtanEfe">@HaqtanEfe on Discord</a>
-          <a class="btn btn-secondary" href="mailto:business@haktanefe.com">Email instead</a>
+      <div style="border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:clamp(24px,3vw,36px); background:#111114;">
+        <form id="pf-form" class="pf-form" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" novalidate>
+          <label style="display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8F8F98;">Your name / handle</span>
+            <input class="pf-field" name="name" placeholder="e.g. Alex" required style="background:#0B0B0D; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; font-size:14px;">
+          </label>
+          <label style="display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8F8F98;">Your Discord</span>
+            <input class="pf-field" name="discord" placeholder="username" style="background:#0B0B0D; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; font-size:14px;">
+          </label>
+          <label style="display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8F8F98;">Project type</span>
+            <select class="pf-field" name="ptype" style="background:#0B0B0D; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; font-size:14px;">
+              <option value="">Select…</option>
+              <option>Basic fix / tweak</option>
+              <option>Basic system</option>
+              <option>Advanced system</option>
+              <option>Full game scripting</option>
+              <option>Optimization</option>
+              <option>Frontend / GUI</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label style="display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8F8F98;">Budget (USD)</span>
+            <select class="pf-field" name="budget" style="background:#0B0B0D; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; font-size:14px;">
+              <option value="">Select…</option>
+              <option>$20 – $50</option>
+              <option>$50 – $200</option>
+              <option>$200 – $500</option>
+              <option>$500 – $2K</option>
+              <option>$2K+</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label style="grid-column:1 / -1; display:flex; flex-direction:column; gap:7px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8F8F98;">Project details</span>
+            <textarea class="pf-field" name="message" rows="4" required placeholder="What are you building, and what do you need scripted?" style="resize:vertical; background:#0B0B0D; border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; color:#EDEDEF; font-family:'IBM Plex Sans',sans-serif; font-size:14px; line-height:1.5;"></textarea>
+          </label>
+          <!-- honeypot: bots fill this, humans never see it -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+          <div style="grid-column:1 / -1; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <span id="pf-form-status" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6D6D77;"></span>
+            <button type="submit" id="pf-form-submit" style="display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:#0B0B0D; border:none; cursor:pointer; font-weight:600; font-size:15px; font-family:'IBM Plex Sans',sans-serif; padding:13px 26px; border-radius:11px;">
+              Send inquiry →
+            </button>
+          </div>
+        </form>
+        <div id="pf-form-sent" style="display:none; text-align:center; padding:30px 10px;">
+          <div style="width:56px; height:56px; margin:0 auto 20px; border-radius:50%; border:1px solid var(--accent); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:26px;">✓</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:24px; color:#F6F6F8; margin-bottom:10px; letter-spacing:-0.02em;">Sent to Discord.</div>
+          <div style="font-size:15px; color:#A4A4AD; max-width:340px; margin:0 auto;">Thanks, I got it. I'll reach out on Discord shortly.</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ─── Footer ─── -->
-    <footer>
-      <div>© HaqtanEfe · 2026</div>
-      <div class="links">
-        <a href="#" class="js-discord" data-username="HaqtanEfe">Discord</a>
-        <a href="https://rodevs.com/portfolios/878362276334272523" target="_blank">Rodevs</a>
-        <a href="https://haktanefe.com">Home</a>
-        <a href="https://personal.haktanefe.com">Personal</a>
+    <!-- CONTACT CTA -->
+    <div style="max-width:1240px; margin:40px auto 0; padding:0 40px 40px;">
+      <div style="border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:clamp(40px,6vw,72px); text-align:center; background:radial-gradient(600px 300px at 50% 0%, var(--glow), transparent 70%);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:22px;">// FIND ME</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,56px); line-height:1.02; letter-spacing:-0.035em; margin:0 0 24px; color:#F6F6F8;">
+          @HaqtanEfe, everywhere.
+        </h2>
+        <p style="font-size:18px; color:#A4A4AD; margin:0 auto 40px; max-width:460px; line-height:1.6;">
+          Same handle on every major platform. Say hi.
+        </p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <button id="pf-copy-discord" style="display:inline-flex; align-items:center; gap:10px; cursor:pointer; background:transparent; font-family:'JetBrains Mono',monospace; font-size:14px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:12px 18px;">
+            <span style="color:var(--accent); display:inline-flex;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 2.8a13.8 13.8 0 0 0-.63 1.28 18.3 18.3 0 0 0-5.52 0A13.3 13.3 0 0 0 8.6 2.8 19.7 19.7 0 0 0 3.7 4.4C.6 9 -.25 13.5.17 17.9a19.9 19.9 0 0 0 6 3.05c.48-.66.9-1.36 1.27-2.1a12.9 12.9 0 0 1-2-.96l.5-.36a14.2 14.2 0 0 0 12.15 0l.5.36c-.63.37-1.3.7-2 .96.36.74.79 1.44 1.27 2.1a19.8 19.8 0 0 0 6-3.05c.5-5.17-.85-9.63-3.56-13.5ZM8.02 15.3c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.95-2.42 2.16-2.42 1.2 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.96 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg></span>
+            <span id="pf-discord-label">HaqtanEfe</span>
+          </button>
+          <a href="https://x.com/HaqtanEfe" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:14px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:12px 18px;">
+            <span style="color:var(--accent); display:inline-flex;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.53 3h3.02l-6.6 7.54L21.75 21h-6.06l-4.75-6.2L5.5 21H2.47l7.06-8.07L2.25 3h6.22l4.29 5.68L17.53 3Zm-1.06 16.2h1.67L7.62 4.71H5.83l10.64 14.49Z"/></svg></span> X / Twitter
+          </a>
+          <a href="https://www.roblox.com/users/2530954279/profile" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:14px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:12px 18px;">
+            <span style="color:var(--accent); display:inline-flex;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.9 2 22 6.9 17.1 24 0 19.1 4.9 2Zm5.02 8.2-1.1 3.88 3.88 1.1 1.1-3.88-3.88-1.1Z"/></svg></span> Roblox
+          </a>
+          <a href="https://rodevs.com/portfolios/878362276334272523" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:14px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:12px 18px;">
+            <span style="display:inline-flex;"><img src="assets/rodevs.png" alt="RoDevs" width="18" height="18" style="object-fit:contain;"></span> RoDevs
+          </a>
+          <a href="mailto:business@haktanefe.com" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:14px; color:#EDEDEF; border:1px solid rgba(255,255,255,0.16); border-radius:11px; padding:12px 18px;">
+            <span style="color:var(--accent); display:inline-flex;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 6.5h18v11H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="m3.5 7 8.5 6 8.5-6"/></svg></span> Email
+          </a>
+        </div>
       </div>
-    </footer>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-top:48px; padding-top:28px; border-top:1px solid rgba(255,255,255,0.07); font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6D6D77; flex-wrap:wrap; gap:12px;">
+        <span>© 2026 HaqtanEfe - Roblox Systems Engineer</span>
+        <span>@HaqtanEfe · everywhere</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- Toast for clipboard feedback -->
-    <div id="toast" class="toast" hidden></div>
-
+  <!-- easter egg: konami reveal -->
+  <div id="pf-egg" style="display:none; position:fixed; left:50%; bottom:28px; transform:translateX(-50%); z-index:60; align-items:center; gap:12px; background:#111114; border:1px solid var(--accent); border-radius:12px; padding:14px 20px; box-shadow:0 20px 50px rgba(0,0,0,0.55);">
+    <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.1em; color:var(--accent);">// KONAMI</span>
+    <span style="font-family:'IBM Plex Sans',sans-serif; font-size:14px; color:#EDEDEF;">Nice eye for detail, that's exactly how I build. Let's talk.</span>
   </div>
-  <script src="script.js"></script>
+
+</div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

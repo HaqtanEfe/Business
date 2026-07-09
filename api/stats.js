@@ -29,8 +29,10 @@ export default async function handler(req, res) {
       { visits: 0, playing: 0 }
     );
 
+    const avatar = await fetchAvatar(cfg.userId || 2530954279).catch(() => null);
+
     res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=300');
-    res.status(200).json({ projects, total, fetchedAt: new Date().toISOString() });
+    res.status(200).json({ projects, total, avatar, fetchedAt: new Date().toISOString() });
   } catch (err) {
     console.error('stats handler error', err);
     res.status(500).json({ error: 'Failed to load stats', detail: err.message });
@@ -41,19 +43,50 @@ async function fetchProject(p) {
   const universeId = await placeToUniverse(p.placeId);
   if (!universeId) return fromFallback(p);
 
-  const r = await fetch(`https://games.roblox.com/v1/games?universeIds=${universeId}`);
-  if (!r.ok) throw new Error(`games api ${r.status}`);
-  const json = await r.json();
+  const [gamesRes, images] = await Promise.all([
+    fetch(`https://games.roblox.com/v1/games?universeIds=${universeId}`),
+    fetchThumbnails(universeId).catch(() => []),
+  ]);
+  if (!gamesRes.ok) throw new Error(`games api ${gamesRes.status}`);
+  const json = await gamesRes.json();
   const game = json.data && json.data[0];
   if (!game) return fromFallback(p);
 
+  const linkPlaceId = game.rootPlaceId || p.placeId;
   return {
-    placeId:  p.placeId,
-    role:     p.role,
-    name:     game.name,
-    visits:   game.visits,
-    playing:  game.playing,
+    placeId:     p.placeId,
+    universeId,
+    role:        p.role,
+    description: p.description,
+    name:        game.name,
+    visits:      game.visits,
+    playing:     game.playing,
+    url:         `https://www.roblox.com/games/${linkPlaceId}`,
+    images,                    // all carousel thumbnails (for the slideshow)
+    thumbnail:   images[0] || null,
   };
+}
+
+// All of a game's carousel thumbnails (16:9), as CDN image URLs.
+async function fetchThumbnails(universeId) {
+  const r = await fetch(
+    `https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=${universeId}&countPerUniverse=10&size=768x432&format=Png`
+  );
+  if (!r.ok) return [];
+  const j = await r.json();
+  const thumbs = (j && j.data && j.data[0] && j.data[0].thumbnails) || [];
+  return thumbs.filter(t => t.state === 'Completed' && t.imageUrl).map(t => t.imageUrl);
+}
+
+// Resolve HaqtanEfe's Roblox avatar headshot to a CDN image URL.
+async function fetchAvatar(userId) {
+  const r = await fetch(
+    `https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${userId}&size=420x420&format=Png&isCircular=false`
+  );
+  if (!r.ok) return null;
+  const j = await r.json();
+  const first = j && j.data && j.data[0];
+  return first && first.state === 'Completed' ? first.imageUrl : null;
 }
 
 // When live data isn't available for a project, fall back to the static
@@ -61,11 +94,15 @@ async function fetchProject(p) {
 function fromFallback(p) {
   if (!p.fallback) return null;
   return {
-    placeId: p.placeId,
-    role:    p.role,
-    name:    p.fallback.name,
-    visits:  p.fallback.visits,
-    playing: p.fallback.playing,
+    placeId:     p.placeId,
+    role:        p.role,
+    description: p.description,
+    name:        p.fallback.name,
+    visits:      p.fallback.visits,
+    playing:     p.fallback.playing,
+    url:         `https://www.roblox.com/games/${p.placeId}`,
+    images:      [],
+    thumbnail:   null,
   };
 }
 
