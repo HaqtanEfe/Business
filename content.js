@@ -269,5 +269,22 @@ print(rollLoot({
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "He is very skilled and quick, making him great to work with." },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "Very nice, clean and easily customisable scripts. He scripted a whole system for me in a day." },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "Delivery was very fast and the quality was beyond words." }
-  ]
+  ],
+
+  /* Iris section — showcases Haktan's own to-do app (iris.haktanefe.com) as a
+     client-progress tool: every commission gets a live, read-only share board.
+       demoUrl   — the public /s/<token> share link the demo button opens.
+                   Leave "" to fall back to appUrl until a board is shared.
+       screenshot— a capture of that board, shown framed in the section. */
+  iris: {
+    demoUrl: "https://iris.haktanefe.com/s/2lEBx7A4sV-bBDdQlZ0xT",
+    appUrl: "https://iris.haktanefe.com",
+    screenshot: "assets/iris.png",
+    features: [
+      { tag: "LIVE PROGRESS",   title: "A bar that actually moves", desc: "Your completion % updates the moment I check a task off — no guessing how far along things are." },
+      { tag: "FULL BREAKDOWN",  title: "Every task & subtask",      desc: "See the exact systems being built, priority-coded, so you know what's shipped and what's next." },
+      { tag: "ONE PRIVATE LINK",title: "Open it anywhere",          desc: "A read-only link — no login, works on your phone. Check in whenever you want." },
+      { tag: "BUILT BY ME",     title: "Not a template",            desc: "Iris is my own product — React/TS, Postgres, WhatsApp capture and an AI-agent API. The engineering you're hiring." }
+    ]
+  }
 };
