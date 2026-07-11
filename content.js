@@ -211,10 +211,10 @@ print(rollLoot({
   tech: ["Luau", "Roblox Studio", "Rojo", "Argon", "Git", "ModuleScripts", "RemoteEvents", "DataStores", "OOP", "Multi-server", "Cosmetics & Inventory", "UGC Integration", "Memory Profiling", "Server Tuning"],
 
   hueFeatures: [
-    { tag: "self-serve", title: "Small tweaks, instantly", desc: "Change settings and values yourself, Hue applies them without waiting on me." },
-    { tag: "summaries",  title: "Catch-up summaries",     desc: "Long thread? Hue recaps decisions and changes so nothing slips." },
-    { tag: "on request", title: "Reaches me when you ask", desc: "Ask Hue to loop me in and it pings me directly, otherwise it keeps things moving on its own." },
-    { tag: "always on",  title: "24/7 in your channel",   desc: "Hue lives in our shared Discord for the whole build, never off the clock." }
+    { tag: "self-serve", title: "Small tweaks, instantly", desc: "Change values yourself; Hue applies them, no waiting on me." },
+    { tag: "summaries",  title: "Catch-up summaries",     desc: "Hue recaps a long thread so nothing slips." },
+    { tag: "on request", title: "Reaches me when you ask", desc: "Ask Hue to loop me in and it pings me directly." },
+    { tag: "always on",  title: "24/7 in your channel",   desc: "Lives in our Discord for the whole build." }
   ],
 
   chats: [
@@ -281,10 +281,10 @@ print(rollLoot({
     appUrl: "https://iris.haktanefe.com",
     screenshot: "assets/iris.png",
     features: [
-      { tag: "LIVE PROGRESS",   title: "A bar that actually moves", desc: "Your completion % updates the moment I check a task off — no guessing how far along things are." },
-      { tag: "FULL BREAKDOWN",  title: "Every task & subtask",      desc: "See the exact systems being built, priority-coded, so you know what's shipped and what's next." },
-      { tag: "ONE PRIVATE LINK",title: "Open it anywhere",          desc: "A read-only link — no login, works on your phone. Check in whenever you want." },
-      { tag: "BUILT BY ME",     title: "Not a template",            desc: "Iris is my own product — React/TS, Postgres, WhatsApp capture and an AI-agent API. The engineering you're hiring." }
+      { tag: "LIVE PROGRESS",   title: "A bar that actually moves", desc: "Updates the moment I check a task off." },
+      { tag: "FULL BREAKDOWN",  title: "Every task & subtask",      desc: "Every system, priority-coded — what's shipped and what's next." },
+      { tag: "ONE PRIVATE LINK",title: "Open it anywhere",          desc: "Read-only link, no login, works on your phone." },
+      { tag: "BUILT BY ME",     title: "Not a template",            desc: "My own product — the engineering you're hiring." }
     ]
   }
 };
