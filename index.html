@@ -177,17 +177,17 @@
     </div>
   </section>
 
-  <!-- IRIS — every commission gets a live progress board. Iris purple (#9d5cff)
-       is used locally (not var(--accent)) so it reads as its own product.
+  <!-- IRIS — every commission gets a live progress board. Follows var(--accent)
+       so the section recolors with the swatch picker like the rest of the page.
        renderIris() in app.js fills #pf-iris-features, the demo href, and the screenshot. -->
   <section id="iris" class="pf-ai" style="position:relative; z-index:1; border-top:1px solid rgba(255,255,255,0.07); max-width:1240px; margin:0 auto; padding:100px 40px; display:grid; grid-template-columns:1fr 1.02fr; gap:60px; align-items:center;">
     <div>
-      <div style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:#9d5cff; margin-bottom:20px;">
-        <span style="width:7px; height:7px; border-radius:2px; background:#9d5cff; box-shadow:0 0 12px #9d5cff;"></span>
+      <div style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:var(--accent); margin-bottom:20px;">
+        <span style="width:7px; height:7px; border-radius:2px; background:var(--accent); box-shadow:0 0 12px var(--accent);"></span>
         // WHILE I BUILD
       </div>
       <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.03em; margin:0 0 22px; color:#F6F6F8;">
-        Never wonder where your <span style="color:#9d5cff;">commission stands</span>.
+        Never wonder where your <span style="color:var(--accent);">commission stands</span>.
       </h2>
       <p style="font-size:18px; line-height:1.7; color:#A4A4AD; margin:0 0 16px; max-width:520px;">
         Every project I take on gets its own live <strong style="color:#EDEDEF; font-weight:600;">Iris board</strong>. You get a private link — open it any time, on any device, and see exactly what's done, what's in progress, and how far along your game is. No "any updates?" messages needed.
@@ -199,7 +199,7 @@
       <div class="pf-grid-4" id="pf-iris-features" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:32px;"></div>
 
       <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
-        <a id="pf-iris-demo" href="https://iris.haktanefe.com" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:9px; background:#9d5cff; color:#0B0B0D; text-decoration:none; font-weight:600; font-size:15px; padding:14px 24px; border-radius:11px;">
+        <a id="pf-iris-demo" href="https://iris.haktanefe.com" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:#0B0B0D; text-decoration:none; font-weight:600; font-size:15px; padding:14px 24px; border-radius:11px;">
           Open the live demo board <span style="font-family:'JetBrains Mono',monospace;">→</span>
         </a>
         <a href="https://iris.haktanefe.com" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8F8F98; text-decoration:none;">iris.haktanefe.com ↗</a>
@@ -210,7 +210,7 @@
          The board can be tall, so the preview is a capped "peek" that fades out
          at the bottom — shows the header + progress + top systems; the CTA opens
          the full live board. -->
-    <div style="border:1px solid rgba(157,92,255,0.25); border-radius:16px; overflow:hidden; background:#0d0d10; box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+    <div style="border:1px solid color-mix(in srgb, var(--accent) 25%, transparent); border-radius:16px; overflow:hidden; background:#0d0d10; box-shadow:0 30px 80px rgba(0,0,0,0.5);">
       <div style="display:flex; align-items:center; gap:8px; padding:11px 14px; border-bottom:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.02);">
         <span style="width:10px; height:10px; border-radius:50%; background:#2C2C31;"></span>
         <span style="width:10px; height:10px; border-radius:50%; background:#2C2C31;"></span>
@@ -223,7 +223,7 @@
         </a>
         <div aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:150px; background:linear-gradient(to bottom, rgba(13,13,16,0) 0%, #0d0d10 92%); pointer-events:none;"></div>
         <div style="position:absolute; left:0; right:0; bottom:16px; display:flex; justify-content:center; pointer-events:none;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:#cdb2ff; background:rgba(157,92,255,0.14); border:1px solid rgba(157,92,255,0.32); border-radius:100px; padding:6px 14px;">▸ live · updates automatically</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:color-mix(in srgb, var(--accent) 55%, #ffffff); background:color-mix(in srgb, var(--accent) 14%, transparent); border:1px solid color-mix(in srgb, var(--accent) 32%, transparent); border-radius:100px; padding:6px 14px;">▸ live · updates automatically</span>
         </div>
       </div>
     </div>

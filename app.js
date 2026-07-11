@@ -242,16 +242,16 @@
         '<div style="font-size:13.5px;line-height:1.55;color:#8F8F98;">' + esc(f.desc) + '</div></div>';
     }).join("");
   }
-  // Iris section — client-progress board showcase. Uses a fixed Iris purple
-  // (#9d5cff), not var(--accent), so it reads as its own product. Guarded so the
+  // Iris section — client-progress board showcase. Follows var(--accent) so it
+  // recolors with the swatch picker like the rest of the page. Guarded so the
   // section can be removed without a console error (same pattern as Hue).
   function renderIris() {
     var el = $("pf-iris-features");
     if (!el) return; // Iris section absent
     var iris = C.iris || {};
     el.innerHTML = (iris.features || []).map(function (f) {
-      return '<div style="border:1px solid rgba(157,92,255,0.16);border-radius:12px;padding:16px 18px;background:#111114;">' +
-        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:10.5px;letter-spacing:0.08em;color:#9d5cff;margin-bottom:8px;">' + esc(f.tag) + '</div>' +
+      return '<div style="border:1px solid color-mix(in srgb, var(--accent) 16%, transparent);border-radius:12px;padding:16px 18px;background:#111114;">' +
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:10.5px;letter-spacing:0.08em;color:var(--accent);margin-bottom:8px;">' + esc(f.tag) + '</div>' +
         '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:600;font-size:15.5px;color:#F6F6F8;margin-bottom:6px;letter-spacing:-0.01em;">' + esc(f.title) + '</div>' +
         '<div style="font-size:13px;line-height:1.5;color:#8F8F98;">' + esc(f.desc) + '</div></div>';
     }).join("");
@@ -266,7 +266,7 @@
         if (shot.parentNode && !shot.parentNode.querySelector(".pf-iris-ph")) {
           var ph = document.createElement("div");
           ph.className = "pf-iris-ph";
-          ph.style.cssText = "aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5f5f6a;background:repeating-linear-gradient(135deg,rgba(157,92,255,0.06) 0 12px,transparent 12px 24px);";
+          ph.style.cssText = "aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5f5f6a;background:repeating-linear-gradient(135deg,color-mix(in srgb, var(--accent) 6%, transparent) 0 12px,transparent 12px 24px);";
           ph.textContent = "[ live board preview ]";
           shot.parentNode.appendChild(ph);
         }
