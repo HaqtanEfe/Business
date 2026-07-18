@@ -1,6 +1,7 @@
-# business.haktanefe.com
+# haqtanefe.dev
 
-HaqtanEfe's Roblox developer portfolio / for-hire page. Static HTML/CSS/JS with
+HaqtanEfe's Roblox developer portfolio / for-hire page (served at the `haqtanefe.dev`
+apex; the old `business.haktanefe.com` 301-redirects here). Static HTML/CSS/JS with
 two Vercel serverless functions. Ported from a Claude Design mockup.
 
 ## Structure
@@ -38,7 +39,8 @@ vercel dev
 
 1. Push to the `business.haktanefe.com` GitHub repo (Vercel auto-deploys).
 2. In the Vercel project → Settings → Environment Variables, set `DISCORD_WEBHOOK_URL`.
-3. The `business.haktanefe.com` domain is already attached to the project.
+3. The `haqtanefe.dev` domain is attached to the project (apex); `business.haktanefe.com`
+   is kept on the project as a permanent redirect to it.
 
 ## Env vars
 

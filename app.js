@@ -1,5 +1,5 @@
 /* ============================================================================
-   app.js — vanilla controller for the business.haktanefe.com page.
+   app.js — vanilla controller for the haqtanefe.dev business page.
    Ports every interaction from the Claude Design mockup (which ran on React):
    terminal cycler + Luau highlighter, Hue chat cycler, live visits count-up,
    accent theme switcher, FAQ accordion, project show-more, copy-Discord,
@@ -255,7 +255,7 @@
         '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:600;font-size:15.5px;color:#F6F6F8;margin-bottom:6px;letter-spacing:-0.01em;">' + esc(f.title) + '</div>' +
         '<div style="font-size:13px;line-height:1.5;color:#8F8F98;">' + esc(f.desc) + '</div></div>';
     }).join("");
-    var url = iris.demoUrl || iris.appUrl || "https://iris.haktanefe.com";
+    var url = iris.demoUrl || iris.appUrl || "https://iris.haqtanefe.dev";
     var demo = $("pf-iris-demo"); if (demo) demo.href = url;
     var link = $("pf-iris-shot-link"); if (link) link.href = url;
     var shot = $("pf-iris-shot");

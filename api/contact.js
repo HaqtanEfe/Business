@@ -70,7 +70,7 @@ export default async function handler(req, res) {
         { name: "Budget", value: budget, inline: true },
         { name: "Details", value: message }
       ],
-      footer: { text: "business.haktanefe.com" },
+      footer: { text: "haqtanefe.dev" },
       timestamp: new Date().toISOString()
     }]
   };

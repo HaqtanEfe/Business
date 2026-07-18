@@ -1,5 +1,5 @@
 /* ============================================================================
-   content.js — all editable copy/data for the business.haktanefe.com page.
+   content.js — all editable copy/data for the haqtanefe.dev business page.
    Edit values here; the markup in index.html is rendered from this file by app.js.
    Ported 1:1 from Haktan's Claude Design mockup ("Roblox Developer Portfolio").
    ========================================================================== */
@@ -271,14 +271,14 @@ print(rollLoot({
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "Delivery was very fast and the quality was beyond words." }
   ],
 
-  /* Iris section — showcases Haktan's own to-do app (iris.haktanefe.com) as a
+  /* Iris section — showcases Haktan's own to-do app (iris.haqtanefe.dev) as a
      client-progress tool: every commission gets a live, read-only share board.
        demoUrl   — the public /s/<token> share link the demo button opens.
                    Leave "" to fall back to appUrl until a board is shared.
        screenshot— a capture of that board, shown framed in the section. */
   iris: {
-    demoUrl: "https://iris.haktanefe.com/s/2lEBx7A4sV-bBDdQlZ0xT",
-    appUrl: "https://iris.haktanefe.com",
+    demoUrl: "https://iris.haqtanefe.dev/s/2lEBx7A4sV-bBDdQlZ0xT",
+    appUrl: "https://iris.haqtanefe.dev",
     screenshot: "assets/iris.png",
     features: [
       { tag: "LIVE PROGRESS",   title: "A bar that actually moves", desc: "Updates the moment I check a task off." },
