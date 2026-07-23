@@ -265,7 +265,8 @@ print(rollLoot({
      To override with a custom image (studios, logos):
        { ..., avatar:"assets/reviews/theirlogo.png", ... } */
   reviews: [
-    { tag: "scripted the game", stars: "★★★★★", robloxUserId: 4261512249, name: "@monkee915", role: "Owner · Build a Brainrot", quote: "", note: "Verified 5★ review" },
+    { tag: "commisioned many times", stars: "★★★★★", robloxUserId: 179090582, name: "@fxnix.", role: "Client · Not-published projects", quote: "", note: "Verified 5★ review" },
+    { tag: "scripted the game", stars: "★★★★★", robloxUserId: 4261512249, name: "@monkee915", role: "Owner · Build a Brainrot", quote: "Very nice person and scripter. Commissioned him for a RNG system and he completed it without upfront payment and the quality was amazing!", note: "Verified 5★ review" },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "He is very skilled and quick, making him great to work with." },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "Very nice, clean and easily customisable scripts. He scripted a whole system for me in a day." },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "Delivery was very fast and the quality was beyond words." }
